@@ -1236,28 +1236,36 @@ html.booting{overflow:hidden}
 .chartw .radar{padding:2px 8px 0;width:90%;margin:0 auto}
 .cw-l{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:8px 14px 12px;border-top:1px solid #1f2128;font:11px -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;color:#8b8f99}
 .cw-l .sw{display:inline-block;width:10px;height:10px;border-radius:2px;background:rgba(255,107,107,.3);border:1.5px solid #ff6b6b;margin-right:6px;vertical-align:-1px}
-/* ===== CeDAR tile: PDF viewer with redactions ===== */
-.pdfv{position:absolute;top:7%;left:8%;width:84%;background:#2a2a2d;border-radius:8px 8px 0 0;overflow:hidden;margin:0;box-shadow:0 30px 60px -25px #000;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
-.tile:hover .pdfv{transform:translateY(-3%)}
-.pdfv .pdf-bar{display:flex;align-items:center;gap:6px;height:24px;padding:0 9px;background:linear-gradient(#3a3a3e,#323235);border-bottom:1px solid #1a1a1c;position:relative}
-.pdfv .pdf-bar i{width:8px;height:8px;border-radius:50%;background:#ff5f57}.pdfv .pdf-bar i:nth-child(2){background:#febc2e}.pdfv .pdf-bar i:nth-child(3){background:#28c840}
-.pdfv .pdf-bar span{position:absolute;left:0;right:0;text-align:center;font:500 9.5px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#b8b8bd;padding:0 50px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pdfv .pdf-pg{margin:10px 10% 0;background:#fff;color:#222;padding:14px 16px 30px;font:clamp(5.5px,.55vw,7.5px)/1.55 Arial,Helvetica,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.4)}
-.pdf-pg .pg-h{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ccc;padding-bottom:5px;margin-bottom:8px}
-.pdf-pg .pg-h .pg-lg{display:inline-block;width:38px;height:7px;background:#111}
-.pdf-pg .pg-h .cf{color:#b42318;font-weight:700;letter-spacing:.08em;font-size:.92em}
-.pdf-pg h5{font:700 1.55em/1.2 Arial,Helvetica,sans-serif;margin:0 0 6px;color:#111}
-.pdf-pg table{width:100%;border-collapse:collapse;margin-bottom:8px}
-.pdf-pg td{border:1px solid #d6d6d6;padding:2px 4px;vertical-align:top}
-.pdf-pg td:first-child{width:34%;background:#f3f3f3;font-weight:700}
-.pdf-pg .sec{font-weight:700;margin:6px 0 2px}
-.pdf-pg p{margin:0 0 3px;color:#333}
-.pdf-pg s{text-decoration:none;background:#000;color:transparent;user-select:none}
-.pdf-pg .ln{display:block;height:.62em;margin:.48em 0;background:#d9d9d9;border-radius:1px}
-.pdf-pg .ln.r{background:#000}
-/* realistic rubber stamp on the CeDAR page */
-.stamp-r{position:absolute;right:12%;top:35%;width:48%;transform:rotate(-9deg);mix-blend-mode:multiply;opacity:.88;pointer-events:none}
-.stamp-r svg{display:block;width:100%;height:auto}
+/* ===== CeDAR tile: unreleased app behind frosted glass ===== */
+.nda{position:absolute;inset:0}
+.nda-ph{position:absolute;left:50%;top:11%;width:44%;aspect-ratio:9/19;transform:translateX(-50%);border-radius:26px;background:#0c0a0b;padding:6px;box-shadow:inset 0 0 0 1.5px #4d4048,0 40px 60px -20px rgba(0,0,0,.9),0 0 0 1px #000;overflow:hidden;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.tile.t-cls:hover .nda-ph{transform:translateX(-50%) translateY(-4%)}
+.nda-scr{height:100%;border-radius:21px;background:linear-gradient(180deg,#f6f1ec,#efe8e1);padding:14% 8% 0;display:grid;align-content:start;gap:7%;filter:blur(3.2px) saturate(1.05);transition:filter .7s}
+.tile.t-cls:hover .nda-scr{filter:blur(2.2px) saturate(1.1)}
+.nda .nl{display:block;height:5px;border-radius:3px;background:#cfc5bd}
+.nda .nl.lt{background:rgba(255,255,255,.55)}
+.nda-top{display:flex;align-items:center;gap:7px}
+.nda-av{width:14px;height:14px;border-radius:50%;background:#d7c2b6;flex:none}
+.nda-bell{margin-left:auto;width:9px;height:9px;border-radius:50%;background:#d9cec6}
+.nda-card{position:relative;border-radius:11px;padding:11% 10%;display:grid;gap:7px;background:linear-gradient(135deg,#c78a99,#a8763f 70%,#7a5a32);box-shadow:0 10px 18px -10px rgba(80,40,30,.6)}
+.nda-bal{display:block;width:62%;height:12px;border-radius:3px;background:rgba(255,255,255,.92)}
+.nda-chip{position:absolute;right:10%;top:16%;width:16px;height:11px;border-radius:3px;background:rgba(255,255,255,.45)}
+.nda-acts{display:grid;grid-template-columns:repeat(4,1fr);gap:8%}
+.nda-acts span{aspect-ratio:1;border-radius:50%;background:#e6dbd2;box-shadow:inset 0 0 0 1.5px #d5c6ba}
+.nda-acts span:first-child{background:#cf8f9e;box-shadow:none}
+.nda-row{display:flex;align-items:center;gap:7px;margin-top:-3%}
+.nda-row i{width:11px;height:11px;border-radius:50%;background:#dfd2c8;flex:none}
+.nda-row .na{margin-left:auto;width:16%;height:5px;border-radius:3px;background:#b9a99c}
+.nda-cta{margin-top:2%;height:16px;border-radius:999px;background:#1d1719}
+.nda-glass{position:absolute;inset:6px;border-radius:21px;background:linear-gradient(160deg,rgba(255,255,255,.22),rgba(255,255,255,.04) 45%,rgba(20,14,16,.18));-webkit-backdrop-filter:blur(1.5px);backdrop-filter:blur(1.5px);pointer-events:none}
+.nda-sweep{position:absolute;left:6px;right:6px;top:0;height:22%;background:linear-gradient(180deg,transparent,rgba(226,163,178,.18),transparent);opacity:0;pointer-events:none}
+.tile.t-cls:hover .nda-sweep{opacity:1;animation:ndaSweep 2.4s cubic-bezier(.45,0,.2,1) infinite}
+@keyframes ndaSweep{from{transform:translateY(-30%)}to{transform:translateY(480%)}}
+.nda-badge{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:7px;white-space:nowrap;padding:7px 13px;border-radius:999px;background:rgba(16,11,14,.78);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(226,163,178,.4);color:#f3ece6;font:500 10px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;box-shadow:0 14px 30px -12px #000;transition:border-color .4s}
+.nda-badge svg{color:var(--acc)}
+[data-lens="attacker"] .nda-badge{border-color:rgba(207,74,95,.75)}
+[data-lens="attacker"] .nda-sweep{background:linear-gradient(180deg,transparent,rgba(207,74,95,.25),transparent)}
+@media (prefers-reduced-motion:reduce){.tile.t-cls:hover .nda-sweep{animation:none;opacity:0}}
 </style>
 </head><body>
 
@@ -1297,7 +1305,7 @@ html.booting{overflow:hidden}
   <div class="orbbox" aria-hidden="true"><div class="glow"></div><canvas id="orb"></canvas></div>
   <div class="wrap hero-grid">
     <div class="hero-txt">
-      <p class="hello">Hi! I’m a <b>security-first UI/UX designer</b> at NYU.</p>
+      <p class="hello">Hi! I’m a <b>security-first UI/UX designer</b> studying at NYU.</p>
       <h1 class="nameh"><span>Noor</span><span><em>Fatima</em></span></h1>
       <p class="line">I design for the user, <b>and against the attacker.</b></p>
       <div class="hero-row">
@@ -1337,20 +1345,14 @@ html.booting{overflow:hidden}
       <span class="tl-a">The tell: the real domain is always the last part.</span>
     </a>
     <div class="tile t-real t-cls">
-      <div class="pv" aria-hidden="true"><div class="pdfv"><div class="pdf-bar"><i></i><i></i><i></i><span>Security_Review_v3.pdf — Page 1 of 14</span></div>
-<div class="pdf-pg"><div class="pg-h"><span class="pg-lg"></span><span class="cf">CONFIDENTIAL · NDA</span></div>
-<h5>Pre-release Security Review</h5>
-<table><tr><td>Product</td><td><s>xxxxxxxxxxxxxxx</s></td></tr><tr><td>Prepared by</td><td>N. Fatima, Secure Product Development</td></tr><tr><td>Status</td><td><s>xxxxxxxx</s> · pre-release</td></tr><tr><td>Classification</td><td>Internal · restricted</td></tr></table>
-<p class="sec">1. Scope</p>
-<p>This review covers the <s>xxxxxxxxxxx</s> and <s>xxxxxxxxx</s> flows ahead of launch.</p>
-<span class="ln" style="width:96%"></span><span class="ln r" style="width:58%"></span><span class="ln" style="width:88%"></span>
-<p class="sec">2. Threat model</p>
-<span class="ln" style="width:92%"></span><span class="ln r" style="width:74%"></span><span class="ln" style="width:81%"></span><span class="ln r" style="width:40%"></span>
-<span class="stamp-r" aria-hidden="true"><svg viewBox="0 0 260 74"><defs><filter id="ink" x="-5%" y="-10%" width="110%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2" result="d"/><feTurbulence type="fractalNoise" baseFrequency=".055 .5" numOctaves="2" seed="3" result="m"/><feColorMatrix in="m" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.1 1.45" result="mk"/><feComposite in="d" in2="mk" operator="in"/></filter></defs><g filter="url(#ink)" fill="none" stroke="#b3121f"><rect x="4" y="4" width="252" height="66" rx="4" stroke-width="4"/><rect x="11" y="11" width="238" height="52" rx="2" stroke-width="1.6"/><text x="130" y="47" text-anchor="middle" fill="#b3121f" stroke="none" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="27" textLength="216" lengthAdjust="spacingAndGlyphs">CONFIDENTIAL</text></g></svg></span></div></div></div>
+      <div class="pv" aria-hidden="true"><div class="nda">
+<div class="nda-ph"><div class="nda-scr"><div class="nda-top"><span class="nda-av"></span><span class="nl" style="width:38%"></span><span class="nda-bell"></span></div><div class="nda-card"><span class="nl lt" style="width:34%"></span><span class="nda-bal"></span><span class="nl lt" style="width:52%"></span><span class="nda-chip"></span></div><div class="nda-acts"><span></span><span></span><span></span><span></span></div><div class="nda-sec"><span class="nl" style="width:30%"></span></div><div class="nda-row"><i></i><span class="nl" style="width:58%"></span><span class="na"></span></div><div class="nda-row"><i></i><span class="nl" style="width:44%"></span><span class="na"></span></div><div class="nda-row"><i></i><span class="nl" style="width:52%"></span><span class="na"></span></div><div class="nda-row"><i></i><span class="nl" style="width:38%"></span><span class="na"></span></div><div class="nda-cta"></div></div><div class="nda-glass"></div><div class="nda-sweep"></div></div>
+<div class="nda-badge"><svg viewBox="0 0 16 16" width="11" height="11"><path d="M4 7V5a4 4 0 1 1 8 0v2h1v8H3V7zm2 0h4V5a2 2 0 1 0-4 0z" fill="currentColor"/></svg><span class="nb-u">Unreleased · Under NDA</span></div>
+</div></div>
       <div class="tmeta"><span class="mono tk">Intern · Summer 2026 · Under NDA</span></div>
       <b>CeDAR</b>
       <span class="tl-u">Secure product development for an unreleased fintech platform. Details are under NDA; I’m happy to walk through my process in person.</span>
-      <span class="tl-a">Unreleased products are a target. That’s why this one stays classified.</span>
+      <span class="tl-a">Unreleased product: classified.</span>
     </div>
     <a class="tile t-real" href="#about">
       <div class="pv" aria-hidden="true"><div class="monitor"><div class="psy"><span class="fx">+</span><span class="stim">CALM</span><span class="psy-t">trial 12 / 80</span><span class="psy-ms">fixation 500 ms · stimulus 200 ms</span></div><div class="stand"></div></div></div>
@@ -1485,7 +1487,7 @@ html.booting{overflow:hidden}
     </div>
     <ul class="xp">
       <li><div><b>New York University</b><small>B.A. Computer Science</small></div><span>2028</span></li>
-      <li><div><b>CeDAR</b><small>Secure Product Development Intern · built security strategy and protocols into a remittance platform while it was being made</small></div><span>Summer 2026</span></li>
+      <li><div><b>CeDAR</b><small>Secure Product Development Intern · built security strategy and protocols into a fintech platform</small></div><span>Summer 2026</span></li>
       <li><div><b>SAVVY Lab</b><small>Research Assistant &amp; Experiment Designer · designed experiment flow, stimulus timing and participant interfaces, including fMRI studies</small></div><span>Fall 2025</span></li>
       <li><div><b>AMFH InsurTech</b><small>UI/UX Design Intern · insurance comparison platform</small></div><span>Summer 2025</span></li>
       <li><div><b class="ii"><em>i</em>iterate</b><small>My design blog</small></div><span>Coming soon</span></li>
